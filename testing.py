@@ -59,7 +59,9 @@ def base_x_conv(decimal_no: int, base: int) -> str:
 def infix_to_postfix(infix_string: str) -> str:
     """Takes and infix expression, returns a postfix equivalent
     """
-    operator_pred: Dict = {'*': 3, '/': 3, '-': 2, '+': 2, ')': 1}
+    operator_pred: Dict = {
+        '*': 3, '/': 3, '-': 2, '+': 2, ')': 1
+    }
     operator_stack: implementation.Stack = implementation.Stack()
     postfix_list = []
     token_list: List = infix_string.split()
